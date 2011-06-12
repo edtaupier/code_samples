@@ -1,0 +1,3 @@
+This is a Rails 3 project being created against an existing, highly normalized SQL Server database.
+This requires more configuration than normal on the ActiveRecord models, and makes for interesting aliasing 
+so the domain is more evident in the code.
