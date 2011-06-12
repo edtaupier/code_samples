@@ -1,0 +1,25 @@
+<div style="height:150px" id="clientInformation" class="panel bordered-box">
+    <div class="ui-widget-header">
+        <%= image_tag "Group_Doctors_2.gif" %>
+        <div>Client Information</div>
+    </div>
+    <ul>
+      <li>
+        <label><%= physician.physician_title %></label>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <strong><%= account.account_name %></strong>
+      </li>
+      <li>
+        <%= location.line_one %>
+      </li>
+      <li>
+        <%= location.line_two %>
+      </li>
+      <li>
+        <%= "#{location.city}, #{location.state} #{location.zip_code}" %>
+      </li>
+    </ul>
+</div>

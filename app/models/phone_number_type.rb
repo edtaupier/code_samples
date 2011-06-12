@@ -1,0 +1,5 @@
+class PhoneNumberType
+
+  HOME = 'AC8F2EEE-29D1-45D0-99AA-24713E97924D'
+
+end

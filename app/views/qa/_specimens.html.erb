@@ -1,0 +1,12 @@
+<div id="specimenInformationContainer" class="panel bordered-box">
+    <div class="ui-widget-header">
+        <%= image_tag "Medical_Report.gif" %>
+        <div>Specimen Information</div>
+        <span>Total Specimens: <%= specimens.length %></span>
+    </div>
+
+    <div id="specimenInformation">
+           <%= render :partial=>"qa/specimen", :collection=>specimens, :as=>:specimen %>
+    </div>
+
+</div>

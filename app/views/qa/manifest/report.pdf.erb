@@ -1,0 +1,25 @@
+<div class="qaManifest">
+
+  <%= render "qa/manifest/header", :account=>@presenter.account, :address=>@presenter.address %>
+  <span id="manifestDate">
+    Date: <%= DateTime.now.short_date_format %>
+  </span>
+  <span>
+    AM / PM Delivery
+  </span>
+
+  <%= render "qa/manifest/cases" %>
+
+ <span id="manifestDeliveryInfo">
+   <%= render "qa/manifest/delivery_info.html.erb" %>
+ </span>
+  <%= clear %>
+  <span id class="manifestSlideShippingInfo">
+    <% if @presenter.slide_shipping_info %>
+        <%= render "qa/manifest/slide_shipping_info.html.erb", :shipping=>@presenter.slide_shipping_info %>
+    <% else %>
+        <h2 style="text-align:center">No Slides Shipping Information exists for the current location.</h2>
+    <% end %>
+  </span>
+</div>
+

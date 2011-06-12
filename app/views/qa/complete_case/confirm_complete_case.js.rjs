@@ -1,0 +1,1 @@
+page.display_lightbox("qa/complete_case/confirm_complete_case", "Complete Case", {:width=>500, :height=>200} )

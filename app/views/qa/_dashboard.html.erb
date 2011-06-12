@@ -1,0 +1,23 @@
+<div class="left-panel">
+
+    <%= render "qa/client_information",
+               {:physician=>@presenter.physician, :account=>@presenter.account,
+                :location=>@presenter.location, :physloc=>@presenter.physician_location} %>
+    <%= render "qa/patient_information",
+               {:patient=>@presenter.patient, :kase=>@presenter.case} %>
+
+    <%= render "qa/case_history",
+               {:histories=>@presenter.case_histories} %>
+
+
+</div>
+
+<div class="right-panel">
+
+    <%= render "qa/specimens", {:specimens=>@presenter.specimens} %>
+    <%= render "qa/case_notes",{:notes=>@presenter.case_notes} %>
+  
+</div>
+
+<%= clear %>
+

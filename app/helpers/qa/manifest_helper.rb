@@ -1,0 +1,2 @@
+module Qa::ManifestHelper
+end

@@ -1,0 +1,3 @@
+page << "window.open('#{url_for(:controller=>'/qa/manifest', :action=>:report, :case_id=>params[:case_id],
+                                :start_date=>params[:start_date], :end_date=>params[:end_date], :format=>"pdf")}',
+        'Report', 'width=1100, height=800, toolbar=no, scrollbars=yes');"

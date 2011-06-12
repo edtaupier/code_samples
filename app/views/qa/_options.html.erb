@@ -1,0 +1,15 @@
+<%= link_to (image_tag "btn_print_labels.png"),
+             url_for(:controller=>:slides, :action=>:index, :case_id=>kase.id),
+            :remote=>true, :class=>"right lab-option" %>
+
+<%= link_to (image_tag "btn_print_manifest.png"),
+             url_for(:controller=>"/qa/manifest", :action=>:options, :location_id=>location.id, :case_id=>kase.id),
+             :remote=>true, :class=>"right lab-option" %>
+
+<%= link_to (image_tag "btn_complete.png"),
+             url_for(:controller => "/qa/complete_case", :action=>:mark_as_complete, :case_id=>kase.id),
+             :remote=>true, :class=>"right lab-option" %>
+
+<%= link_to (image_tag "btn_close_case.png"),
+             url_for(:controller=>:home),
+             :class=>"right lab-option" %>

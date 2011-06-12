@@ -1,0 +1,3 @@
+page.close_lightbox
+page.update_current_lab_center
+page.show_lab_flow_department("/qa/index")

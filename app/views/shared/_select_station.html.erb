@@ -1,0 +1,11 @@
+<%= form_tag "/embedding/set_embedding_station", :remote=>true do %>
+  <ul>
+    <li>
+      <label for="WorkStatin_id">Station</label>
+      <%= select("WorkStation", "id", @stations) %>
+    </li>
+  </ul>
+  
+<div style="clear:both;border-bottom:1px solid gray"></div>
+<%= submit_tag "Save", :class=>"lightbox-submit" %>
+<% end %>

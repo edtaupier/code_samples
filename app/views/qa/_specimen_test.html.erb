@@ -1,0 +1,14 @@
+<dl class="specimen-test-detail">
+    <dt>
+        <%= lab_test %>
+    </dt>
+    <dd>
+      <div>
+        <%= lab_test.cpt_code? ? lab_test.cpt_code : "N/A" %>
+      </div>
+      <div>
+         <%= "(#{stest.ihc_status})" if stest.ihc_status %>
+      </div>
+    </dd>
+</dl>
+<%= clear %>

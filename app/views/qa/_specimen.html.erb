@@ -1,0 +1,16 @@
+<ul>
+    <li>
+      <label>
+        <%= "#{specimen.number}. #{specimen.specimen_type_description} (#{specimen.sanitized_body_site_description})" %>
+      </label>
+    </li>
+    <li>
+      <% specimen.specimen_tests.each do |stest| %>
+        <% if stest.lab_test.isPanel? %>
+            <%= render "qa/test_panel", :stest=>stest, :panel=>stest.lab_test %>
+        <% else %>
+            <%= render "qa/specimen_test", :stest=>stest, :lab_test=>stest.lab_test %>
+        <% end %>
+      <% end %>
+    </li>
+</ul>

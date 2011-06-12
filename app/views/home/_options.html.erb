@@ -1,0 +1,14 @@
+<div class="center-text">
+  <span>
+    Welcome to LabFlow!  To begin, select the laboratory center that you would like to work with.
+  </span><br/><br/>
+  <%=image_tag "specrec_gray.png", :class=>"lab-option" %>
+  <%=link_to (image_tag "embedding.png", :class=>"lab-option"), "/embedding", :remote=>true %>
+  <%=image_tag "microtomy_gray.png", :class=>"lab-option" %><br/>
+  <%=image_tag "tissue_prep_gray.png", :class=>"lab-option" %>
+  <%=image_tag "staining_gray.png", :class=>"lab-option" %>
+  <%=link_to (image_tag "qa_center.png", :class=>"lab-option"), qa_path, :remote=>true %><br/>
+  <!--<=image_tag "qa_center_gray.png", :class=>"lab-option" ><br/>-->
+  <%=image_tag "heartbeat_gray.png", :class=>"lab-option" %>
+</div>
+

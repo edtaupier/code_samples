@@ -1,0 +1,2 @@
+page << "$('#lightbox-error-message').html(#{@message.to_json})"
+page << "lightboxContainer.showError();"

@@ -1,0 +1,13 @@
+ <div id="pageError" class="content" style="display:none">
+    <div id="errorImage">
+      <%= image_tag "stop.png" %>
+    </div>
+    <div id="errorContents">
+      <div id="errorHeader">An error has occurred.</div>
+      <div id="errorMessage"></div>
+    </div>
+    <%= clear %><br/>
+    <div id="closeError">
+      <%= link_to_function "Close", "$('#pageError').hide('blind', {direction: 'vertical'}, 750)" %>
+    </div>
+ </div>

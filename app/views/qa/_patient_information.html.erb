@@ -1,0 +1,55 @@
+<div style="height:215px" id="patientInformation" class="panel bordered-box">
+    <div class="ui-widget-header">
+        <%= image_tag "User_Patient_Male.gif" %>
+        <div>Patient Information</div>
+    </div>
+
+    <dl>
+      <dt>
+        Name
+      </dt>
+      <dd>
+        <%= patient.reverse %>
+      </dd>
+      <dt>
+        SSN
+      </dt>
+      <dd>
+        <%= patient.ssn.ssn_format %>
+      </dd>
+      <dt>
+        Gender
+      </dt>
+      <dd>
+        <%= patient.gender? ? patient.gender : "Not Provided" %>
+      </dd>
+      <dt>
+        Date of Birth
+      </dt>
+      <dd>
+        <%= patient.dob.short_date_format %>
+      </dd>
+      <dt>
+        Address
+      </dt>
+      <dd>
+        <%= patient.address_line_one.blank? ? "Not Provided" : "#{patient.address_line_one}<br/>".html_safe %>
+        <%= "#{patient.address_line_two}<br/>".html_safe if !patient.address_line_two.blank? %>
+        <%= "#{patient.address_city}, #{patient.address_state} #{patient.address_zip_code}" if !patient.address_city.blank? %>
+      </dd>
+      <dt>
+        Home Phone
+      </dt>
+      <dd>
+        <%= patient.phone_number.phone_format %>
+      </dd>
+      <dt>
+        Chart Number
+      </dt>
+      <dd>
+        <%=kase.chartNumber? ? kase.chartNumber : "Not Provided" %>
+      </dd>
+    </dl>
+
+
+</div>

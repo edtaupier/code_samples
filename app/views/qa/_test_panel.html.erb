@@ -1,0 +1,18 @@
+<% panel.lab_tests.each do |lab_test| %>
+
+    <dl class="specimen-test-detail">
+        <dt>
+            <%= "#{panel}: #{lab_test}" %>
+        </dt>
+        <dd>
+          <div>
+            <%= lab_test.cpt_code? ? lab_test.cpt_code : "N/A" %>
+          </div>
+          <div>
+             <%= "(#{stest.ihc_status})" if stest.ihc_status %>
+          </div>
+        </dd>
+    </dl>
+    <%= clear %>
+
+<% end %>

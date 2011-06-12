@@ -1,0 +1,40 @@
+<div class="content-width centered bordered-box">
+
+  <div class="margined">
+    This center is designed to track the manufacture of histology blocks.  To begin,
+    scan or enter the block identifier on the cassette you would like to process.
+    <br/><br/>
+    
+    <%= form_tag "/embedding/search_block", :remote=>true, :id=>"embeddingForm" do %>
+      <label class="light-blue large-font" for="search_block">Block Id:</label><br/>
+      <%= text_field_tag("search_block", "") %>
+      <%=hidden_field_tag "currentBlock" %>
+      <%=hidden_field_tag "previousBlock" %>
+      <%=submit_tag "", :class=>"search-button right" %>
+    <% end %>
+    <br/>
+    <br/>
+    
+    <label class="light-blue large-font">Currently Processing:</label>
+    <span id="processingMessage"></span>
+    <hr class="light-blue">
+    
+    <div id="blockDetails">
+      <div class="center-text large-font">No Block Selected</div>
+    </div>
+    
+    <div class="right margined">
+      <% link_to(image_tag("flag_red.png"), "", :remote=>true) %>
+      <% link_to("Flag For QA", "", :remote=>true) %>
+    </div>
+  </div>
+  
+  <%= clear %>
+  
+</div>  
+<br/>
+
+<div class="content-width centered">
+   <%= link_to_function(image_tag("end_session.png"), "endEmbeddingSession()") %>
+</div>
+

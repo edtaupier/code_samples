@@ -1,0 +1,23 @@
+<div class="gradient-bar case-header">
+  <%= render "shared/case_header",
+             :kase=>@case, :physician=>@presenter.physician,
+             :account=>@presenter.account, :patient=>@presenter.patient %>
+</div>
+
+<%= render "shared/error" %>
+
+<% if @presenter.informational %>
+    <%= render "shared/informational_header", :message=>@presenter.informational %>
+<% end %>
+
+<div id="qaButtons">
+  <%= render "qa/options", :kase=>@case, :location=>@presenter.location %>
+</div>
+<%= clear %>
+<div id="qaDashboard">
+  <%= render "qa/dashboard" %>
+</div>
+
+<div id="appletContainer">
+  <%= render "shared/print_applet" %>
+</div>

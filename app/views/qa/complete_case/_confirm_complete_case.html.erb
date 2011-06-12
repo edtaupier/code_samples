@@ -1,0 +1,8 @@
+<p>
+  <h2>Are you sure you wish to mark this case as complete?</h2>
+</p>
+<hr/>
+<%= link_to (image_tag "btn_complete.png"),
+             url_for(:controller => "/qa/complete_case", :action=>:mark_as_complete,
+                     :case_id=>params[:case_id], :confirmed=>true),
+             :remote=>true, :class=>"right lab-option" %>

@@ -1,0 +1,9 @@
+<%= form_tag url_for(:action=>"get_case"), :remote=>true do %>
+  <ul>
+    <li>
+      <label for="caseNumber">Case Number: </label>
+      <%= text_field_tag "caseNumber" %>
+      <%= image_submit_tag "search.png", :class=>"right" %>
+    </li>
+  </ul>
+<% end %>

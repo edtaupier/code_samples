@@ -1,0 +1,22 @@
+<table id="slidesTable">
+  <thead>
+    <tr>
+      <th style="width:20%">Specimen #</th>
+      <th style="width: 20%">Block Label</th>
+      <th style="width:25%">Body Site</th>
+      <th style="width:25%">Stain</th>
+      <th style="width: 8%; text-align:right">
+        <%= image_tag("Printer.png") %>
+        <%= check_box_tag "all", 1, false, :style=>"margin-bottom:5px", :onclick=>"slideList.selectAllForPrint()", :id=>"selectAllSlides" %>
+      </th>
+      <th style="width:2%"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @slides.each do |slide| %>
+        <tr>
+            <%= render :partial=>"slides/list_row", :locals=>{:slide=>slide} %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

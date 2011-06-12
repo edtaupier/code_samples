@@ -1,0 +1,5 @@
+class Priority
+
+  NORMAL = "0A592A22-AB7D-4A76-A701-82002F91D912"
+
+end

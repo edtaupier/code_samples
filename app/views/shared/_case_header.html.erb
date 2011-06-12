@@ -1,0 +1,46 @@
+<dl style="width:20%">
+  <dt>
+    Case Type
+  </dt>
+  <dd>
+    <%= kase.description %>
+  </dd>
+  <dd></dd>
+</dl>
+
+<dl style="width:35%">
+  <dt>
+    Ordering Physician
+  </dt>
+  <dd>
+    <%= physician.physician_title %>
+  </dd>
+  <dd>
+    <%= account.account_name %>
+  </dd>
+</dl>
+
+<dl style="width:25%">
+  <dt>
+    Patient Name
+  </dt>
+  <dd>
+    <%= patient.reverse %>
+  </dd>
+  <dd>
+    SSN: <%= patient.ssn.ssn_format %> |
+    DOB: <%= patient.dob.short_date_format %>
+  </dd>
+</dl>
+
+<dl style="width:20%">
+  <dt>
+    Case Number
+  </dt>
+  <dd>
+    <%=kase.accessionNumber %>
+  </dd>
+  <dd id="caseStatusDescription">
+    (<%= kase.status_description %>)
+  </dd>
+</dl>

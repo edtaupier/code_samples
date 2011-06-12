@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LabFlow QA</title>
+  <%= stylesheet_link_tag 'default', 'tables', 'qa' %>
+  <%= stylesheet_link_tag 'jquery-ui-1.8.9.custom.css' %>
+  <%= stylesheet_link_tag 'lightbox', 'colors', 'errors', 'slides', 'form', 'manifest' %>
+  <%= javascript_include_tag 'jquery-1.5', 'jquery-ui-1.8.9.custom.min.js', 'jquery.class',  'rails', 
+                             'lightbox', 'application', 'embedding', 'jquery.dataTables', 'utils', 'qa', 'slides' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<header>
+  <div class='content'>
+    <div class="right" style="margin: 5px 0 0 0">
+      <% if session[:user] %>
+        <%= link_to(image_tag("logout.png"), "/logout")%><br/>
+        <%= link_to("Logout", "/logout") %>
+      <% end %>
+    </div>
+  </div>
+</header>
+
+<div id="content">
+  <%= yield %>
+</div>
+
+<div id="dialog" title="Basic dialog">
+</div>
+
+<div id="timer" style="display:none">
+  <%=image_tag "loading.gif" %>
+  <div>Please Wait</div>
+</div>
+
+<%= render "shared/lightbox_error" %>
+
+<footer>
+  <div class='content'>
+  </div>
+</footer>
+</body>
+</html>

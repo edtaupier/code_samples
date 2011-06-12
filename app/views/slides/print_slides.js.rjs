@@ -1,0 +1,2 @@
+@encoded_images = @slide_labels.collect{|l| l.encoded_string}
+page << "labelPrinter.printLabels(#{array_or_string_for_javascript @encoded_images})"

@@ -1,0 +1,23 @@
+<%= form_tag "/authenticate", :remote=>true, :class=>'login' do%>
+<fieldset>
+  <legend>
+    Login
+  </legend>
+
+  <ul>
+    <li>
+      <label for="username">Username</label>
+      <%= text_field_tag("username") %>
+    </li>
+    <li>
+      <label for="password">Password</label>
+      <%= password_field_tag("password") %>
+    </li>
+  </ul>
+  <%= submit_tag "Login" %>
+</fieldset>
+<% end %>
+<p id="loginError" class="error center-text"></p>
+<script>
+  $("#username").focus();
+</script>

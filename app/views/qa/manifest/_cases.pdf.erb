@@ -1,0 +1,45 @@
+<table id="qaManifestTable">
+  <thead>
+    <tr>
+      <th width="2%">
+        #
+      </th>
+      <th width="11%">
+        Case Type
+      </th>
+      <th width="10%">
+        Acc. Number
+      </th>
+      <th width="6%">
+        Acc. Date
+      </th>
+      <th width="10%">
+        Client Number
+      </th>
+      <th width="11%">
+        Pt. Name
+      </th>
+      <th width="4%">
+        # Of Blocks
+      </th>
+      <th width="4%">
+        # of Slides
+      </th>
+      <th width="10%">
+        QA Dept Signature
+      </th>
+      <th width="7%">
+        Status
+      </th>
+      <th width="10%">
+        Doc Off Signature
+      </th>
+      <th width="14%">
+        Comments
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+        <%= render :partial=>"qa/manifest/report_row", :collection=>@presenter.cases, :as=>:kase %>
+  </tbody>
+</table>

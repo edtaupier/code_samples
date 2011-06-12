@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LabFlow QA</title>
+  <%= wicked_pdf_stylesheet_link_tag 'default', 'tables', 'qa' %>
+  <%= wicked_pdf_stylesheet_link_tag 'colors', 'slides', 'form', 'manifest' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="reportContent">
+  <%= yield %>
+</div>
+
+</body>
+</html>

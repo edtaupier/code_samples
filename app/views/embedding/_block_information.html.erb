@@ -1,0 +1,38 @@
+<dl class="block-details">
+    <dt>
+      Case Number:
+    </dt>
+    <dd>
+      <%= @block.case.accessionNumber %>
+    </dd>
+    <dt>
+      Patient:
+    </dt>
+    <dd>
+      <%= @block.patient.name %>
+    </dd>
+    <dt>
+      Specimen #:
+    </dt>
+    <dd>
+      <%= @scan.specimen_number %>
+    </dd>
+    <dt>
+      Block Id:
+    </dt>
+    <dd>
+      <%= @scan.block_of_origin %>
+    </dd>
+    <dt>
+      Specimen Type:
+    </dt>
+    <dd>
+      <%= @block.specimen.specimen_type %>
+    </dd>
+    <dt>
+      Cassette Color:
+    </dt>
+    <dd>
+      <%= @block.specimen.cassetteColor.capitalize if @block.specimen.cassetteColor %>
+    </dd>
+</dl>

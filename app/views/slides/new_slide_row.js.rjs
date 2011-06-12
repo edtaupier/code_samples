@@ -1,0 +1,3 @@
+content = render :partial=>"slides/list_row", :locals=>{:slide=>@slide}
+content.gsub!('</td>', '|').gsub!("<td>", '')
+page << "slideList.addRow(#{content.split('|').to_json})"

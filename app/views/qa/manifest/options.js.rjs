@@ -1,0 +1,2 @@
+page.display_lightbox("qa/manifest/options", "Manifest Options", {:width=>575, :height=>250})
+page << "options = new QaManifestOptions()"

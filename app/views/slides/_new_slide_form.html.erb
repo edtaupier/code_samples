@@ -1,0 +1,21 @@
+<form onsubmit="slideList.addNewSlide();return false" id="newSlideForm">
+
+    <ul class="form-list">
+      <li>
+        <label for="specimenNumber">Specimen</label>
+        <%= select_tag "specimenId", options_from_collection_for_select(@case.specimens.number_order, "specimenID", "specimenNumber") %>
+      </li>
+      <li>
+        <label for="label">Block Label</label>
+        <%= text_field_tag "label", '', :class=>"smallField" %>
+      </li>
+      <li>
+        <label for = "label">Stain</label>
+        <%= text_field_tag "stain", '', :class=>"stain-input largeField" %>
+      </li>
+    </ul>
+    <%= clear %>
+
+    <%= link_to_function image_tag("btn_reset.png", :size=>"110x45", :class=>"new-slide-option left"), "$('#newSlideForm').clearForm();" %>
+    <%= image_submit_tag "btn_save.png", :class=>"new-slide-option right", :height=>"45px", :width=>"110px", :title=>"Add New Slide" %>
+</form>

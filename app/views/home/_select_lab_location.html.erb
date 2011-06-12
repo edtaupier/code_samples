@@ -1,0 +1,10 @@
+<%= form_tag "/login/lab_location_selected", :remote=>true do %>
+  <ul>
+   <li>
+      <label for="location">Location</label>
+      <%= select("LabLocation", "id", LabLocation.login_list) %>
+    </li>
+  </ul>
+  <div style="clear:both;border-bottom:1px solid gray"></div>
+  <%= submit_tag "Continue", :class=>"lightbox-submit" %>
+<% end %>

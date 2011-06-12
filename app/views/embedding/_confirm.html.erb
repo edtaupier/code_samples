@@ -1,0 +1,6 @@
+<p>
+  The embedding for the current block has not been marked as complete.  Would you like to complete this block?
+</p>
+<%= bottom_border %>
+<%= link_to(image_tag("btn_yes.png"), {:action=>:complete_embedding, :currentBlock=>@block.specimenBlockID}, {:remote=>true, :class=>"margined right"}) %>
+<%= link_to(image_tag("btn_no.png"), "/home", :class=>"margined right") %>

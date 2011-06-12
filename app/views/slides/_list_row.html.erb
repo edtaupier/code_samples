@@ -1,0 +1,18 @@
+<td>
+  <%= slide.specimen_number %>
+</td>
+<td>
+   <%= text_field_tag "[slides][#{slide.slideID}]label", slide.label, :class=>"smallField" %>
+</td>
+<td>
+  <%= slide.body_site_description %>
+</td>
+<td>
+  <input name="<%="[slides][#{slide.slideID}]stain" %>" class="stain-input largeField" value="<%=slide.stain %>" />
+</td>
+<td style="text-align:right">
+  <%= hidden_field_tag "hidden_#{slide.slideID}", false, :name=>"[slides][#{slide.slideID}]print" %>
+  <%= check_box_tag "[slides][#{slide.slideID}]print", true, false, :class=>"printLabelBox" %>
+</td>
+<td>
+

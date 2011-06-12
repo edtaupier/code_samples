@@ -1,0 +1,3 @@
+page.display_lightbox("slides/index", "Case Slides", {:height=>500, :width=>950})
+page << "slideList = new SlideList('#{@case.caseID}', #{LabTest.tests_for_case(@case).to_json});"
+page << "labelPrinter = new LabelPrinter('printApplet')"

@@ -1,0 +1,19 @@
+<%= form_tag url_for(:controller=>"/qa/manifest", :action=>:view,
+                     :location_id=>params[:location_id], :case_id=>params[:case_id]),
+             :remote=>true, :id=>"manifestOptionsForm" do %>
+
+    <div style="height:100px;">
+        <div class="left">
+            <label for="startDate">Start Date:</label>
+            <input type="text" name="start_date" id="startDate" readonly="true" />
+        </div>
+        <div class="left">
+            <label for="endDate">End Date:</label>
+            <input type="text" name="end_date" id="endDate" readonly="true" />
+        </div>
+    </div>
+
+    <hr/>
+    <%= image_submit_tag "btn_submit.png", :class=>"margined right" %>
+
+<% end %>

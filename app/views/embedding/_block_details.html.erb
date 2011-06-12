@@ -1,0 +1,9 @@
+<%= render "/embedding/block_information" %>
+<%= clear %>
+
+<hr/>
+<% if @previous_block %>
+  <%= link_to(image_tag("btn_previous.png"), {:action=>"view_previous_block", :previousBlock=>@previous_block.barcode}, 
+  :class=>"left", :remote=>true) %>
+<% end %>
+<%= link_to(image_tag("btn_cancel.png"), "/embedding/cancel", :class=>"right", :remote=>true) %>

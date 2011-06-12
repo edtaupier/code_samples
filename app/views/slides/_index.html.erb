@@ -1,0 +1,12 @@
+<div id="newSlide">
+  <%= render "/slides/new_slide" %>
+</div>
+<form onsubmit="return false" id="slideList">
+  <%= render "/slides/list" %>
+</form>
+<%= clear %>
+<hr/>
+<div id="slideOptions">
+  <%= link_to_function image_tag("btn_print_slides.png"), "slideList.print()", :class=>"right" %>
+  <%= link_to_function image_tag("btn_save_and_close.png"), "slideList.saveClose()", :class=>"right" %>
+</div>

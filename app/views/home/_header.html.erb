@@ -1,0 +1,30 @@
+<dl style="width:20%">
+  <dt>
+    Current User
+  </dt>
+  <dd>
+    <%= User.current %>
+  </dd>
+</dl>
+
+<dl style="width:35%">
+  <dt>
+    Current Location
+  </dt>
+  <dd>
+    <%= if LabLocation.current then shorten_string(LabLocation.current.labAddress, 50) end %>
+  </dd>
+</dl>
+
+<dl style="width:25%">
+  <dt>
+    Session Start
+  </dt>
+  <dd>
+    <%= format_long_date(session[:start_time]) %>
+  </dd>
+</dl>
+
+<dl style="width:20%" id="labCenter">
+  <%= render "shared/lab_center" %>
+</dl>

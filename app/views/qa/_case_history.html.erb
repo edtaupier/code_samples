@@ -1,0 +1,28 @@
+<div id="caseHistoryContainer" class="panel bordered-box">
+    <div class="ui-widget-header">
+        <%= image_tag "Medical_Invoice_Warning.gif" %>
+        <div>Case History</div>
+    </div>
+
+    <div id="caseHistory">
+        <table id="caseHistoryTable">
+          <thead>
+            <tr>
+              <th style="width:38%">
+                Log Date
+              </th>
+              <th style="width:42%">
+                Description
+              </th>
+              <th style="width:20%">
+                User
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render :partial=>"qa/case_history_row", :collection=>histories, :as=>:history %>
+          </tbody>
+        </table>
+    </div>
+
+</div>
